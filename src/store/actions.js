@@ -24,13 +24,13 @@ import {
   // reqSearchShop
 } from '../api'
 export default {
-  async getAddress({ commnit, state }) {
+  async getAddress({ commit, state }) {
     const geohash = state.latitude + ',' + state.longitude
     const result = await reqAddress(geohash)
 
     if (result.code == 0) {
-      const address = resul.data
-      commnit(RECEIVE_ADDRESS, { address })
+      const address = result.data
+      commit(RECEIVE_ADDRESS, { address })
     }
   },
 

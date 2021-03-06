@@ -9,6 +9,7 @@
 import { mapActions } from "vuex";
 import FooterGuide from "./compoments/FooterGuide/FooterGuide";
 
+
 export default {
   mounted() {
     // this.$route.dispath("getAddress");
